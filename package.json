@@ -1,0 +1,20 @@
+{
+  "name": "cutiecapt",
+  "version": "0.1.0",
+  "description": "Easy webpage screenshots",
+  "keywords": [
+    "browser",
+    "screenshot",
+    "screengrab",
+    "capture"
+  ],
+  "author": "Justin Vaillancourt <justin.vaillancourt@gmail.com> (http://jvaill.com)",
+  "scripts": {
+    "prepublish": "cake build"
+  },
+  "main": "lib/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jvaill/cutiecapt.git"
+  }
+}
