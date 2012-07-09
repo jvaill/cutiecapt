@@ -60,7 +60,7 @@ spawnCutyCapt = (path, site, out, options = {}, cb) ->
     error = new Error("CutyCapt exited with return value #{code}") if code
     cb?(error || false)
 
-exports.path = 'cutycapt'
+exports.path = 'CutyCapt'
 exports.options = {}
 exports.capture = (site, out, cb) ->
   throw new Error('site must be set') unless site
@@ -68,7 +68,7 @@ exports.capture = (site, out, cb) ->
 
   site = "http://#{site}" unless url.parse(site).protocol
 
-  # ensure out format is supported by cutycapt
+  # ensure out format is supported by CutyCapt
   extension = out.substring(out.lastIndexOf('.') + 1 || out.length)
   unless extension in SUPPORTED_EXTENSIONS
     throw new Error("out must have one of the following extentions: #{SUPPORTED_EXTENSIONS.join(', ')}")

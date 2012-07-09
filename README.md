@@ -6,9 +6,9 @@ Build the library using ```cake build``` and link it locally with ```npm link```
 ## Exports
 The path to CutyCapt
 
-```exports.path = 'cutycapt'```
+```exports.path = 'CutyCapt'```
 
-Additional options to pass (in camel case)
+Additional options to pass (camel cased, e.g. jsCanOpenWindows)
 
 ```exports.options = {}```
 
@@ -21,10 +21,13 @@ Require the library
 
 ```cutiecapt = require('cutiecapt');```
 
-Set your path to CutyCapt (defaults to ```cutycapt```)
+Set your path to CutyCapt (defaults to ```CutyCapt```)
 
-```cutiecapt.path = './cutycapt';```
+```cutiecapt.path = './CutyCapt';```
 
 Capture a webpage
 
 ```cutiecapt.capture('google.ca', 'google.png');```
+
+## CutyCapt
+http://cutycapt.sourceforge.net/
