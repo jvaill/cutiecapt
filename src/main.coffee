@@ -51,11 +51,19 @@ spawnCutyCapt = (path, site, out, options = {}, cb) ->
     cb = options
     options = {}
   
+  # since options is passed by ref, clone it first
+  tmpOptions = {}
+  tmpOptions[key] = value for key, value of options
+  options = tmpOptions
+  
   [options.url, options.out] = [site, out]
   options = transformArguments(options)
   options = flattenArguments(options)
   
   cutyCapt = childProcess.spawn(path, options)
+  cutyCapt.stderr.on 'data', (data) ->
+    if data.toString().match(/^execvp/)
+      throw new Error('error starting CutyCapt, please ensure path is correctly set')
   cutyCapt.on 'exit', (code) ->
     error = new Error("CutyCapt exited with return value #{code}") if code
     cb?(error || false)
