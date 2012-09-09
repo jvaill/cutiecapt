@@ -1,4 +1,4 @@
-{spawn} = require 'child_process'
+{spawn} = require('child_process')
 
 build = ->
   coffee = spawn('coffee', ['-c', '-o', 'lib', 'src'])
