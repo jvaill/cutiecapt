@@ -1,5 +1,5 @@
 # cutiecapt - easy webpage screenshots for node
-### (CutyCapt bindings)
+(CutyCapt bindings)
 
 ## Installation
 Build the library using ```cake build``` and link it locally with ```npm link```
